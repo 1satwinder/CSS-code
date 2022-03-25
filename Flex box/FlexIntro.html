@@ -8,10 +8,8 @@
     <style>
       /* Using media query to make it responsive */
 
-      @media (min-width: 700px) {
         .container {
           display: flex;
-          /* flex-direction: column; //align items to colum*/
         }
         .container-2 {
           display: flex;
@@ -20,8 +18,12 @@
           /* justify-content: space-around;  */
           justify-content: space-between;
         }
+        
+      @media (max-width: 768px) {
+        .container, .container-2{
+          flex-direction: column;
+        }   
       }
-
       .container div,
       .container-2 div {
         border: 1px solid black;
