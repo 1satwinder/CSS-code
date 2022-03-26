@@ -6,15 +6,15 @@
 
     &:hover{
         transform: scale(0.98);
-    }
+    } 
 }
 
 .btn-primary{
     @extend %btn;
-    background-color: $primary-color;
+    @include set-background(lighten($primary-color, 10%))
 }
 
 .btn-secondary{
     @extend %btn;
-    background-color: $secondary-color;
+    @include set-background(lighten($secondary-color, 10%))
 }

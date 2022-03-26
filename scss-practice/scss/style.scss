@@ -21,8 +21,7 @@ img{
 }
 
 .showcase{
-    background-color: $primary-color;
-    color: #ffff;
+    @include set-background($primary-color);
     height: 600px;
 
     nav{
@@ -42,7 +41,7 @@ img{
         }
     }
     a{
-        color: #ffff;
+        color: set-text-color($primary-color);
     }
 
     &-content{
@@ -64,3 +63,5 @@ img{
     }
 }
 
+
+@import 'mobile';
