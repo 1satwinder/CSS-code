@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .paragraph {
+        line-height: 25px;
+        max-width: 500px;
+      }
+      .second {
+        width: 200px;
+        height: 300px;
+        background-color: lightblue;
+      }
+      @media screen and (min-width: 500px) {
+        .second {
+          background-color: green;
+        }
+      }
+      html {
+        font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+      }
+      .icon {
+        width: 4rem;
+        height: 4rem;
+      }
+      /* object-fit maintain aspect ratio of image */
+      .img1 {
+        object-fit: cover; /* does cropping. By default, does bottom cropping  */
+        object-position: bottom; /* we specify what part to crop like bottom, top, left, centre. */
+      }
+      .img2 {
+        object-fit: contain; /* do not crop */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        iusto alias non porro rerum totam quas, dicta, laboriosam nesciunt nisi
+        in laudantium repellendus cupiditate suscipit asperiores praesentium
+        architecto labore facilis. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatem iusto alias non porro rerum totam quas,
+        dicta, laboriosam nesciunt nisi in laudantium repellendus cupiditate
+        suscipit asperiores praesentium architecto labore facilis Lorem ipsum
+      </p>
+      <label> Enter Name: <input type="text" /> </label>
+      <div class="second"></div>
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-21 -21 42 42"
+        width="200"
+        height="200"
+        class="icon"
+      >
+        <title>Smiling face</title>
+        <circle r="20" fill="yellow" stroke="black" />
+        <ellipse rx="2.5" ry="4" cx="-6" cy="-7" fill="black" />
+        <ellipse rx="2.5" ry="4" cx="6" cy="-7" fill="black" />
+        <path
+          stroke="black"
+          d="M -12,5 A 13.5,13.5,0 0,0 12,5 A 13,13,0 0,1 -12,5"
+        />
+      </svg>
+      <br />
+      <img class="img1" src="./satwinder.jpg" width="300" height="300" />
+      <img class="img2" src="./satwinder.jpg" width="300" height="300" />
+    </div>
+    <script>
+      console.log("script loaded");
+    </script>
+  </body>
+</html>

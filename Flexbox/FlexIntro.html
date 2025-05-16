@@ -8,22 +8,18 @@
     <style>
       /* Using media query to make it responsive */
 
-        .container {
-          display: flex;
-        }
-        .container-2 {
-          display: flex;
-          /* justify-content: center; */
-          /* justify-content: flex-end; */
-          /* justify-content: space-around;  */
-          justify-content: space-between;
-        }
-        
-      @media (max-width: 768px) {
-        .container, .container-2{
-          flex-direction: column;
-        }   
+      .container {
+        display: flex;
+        flex-wrap: wrap;
       }
+      .container-2 {
+        display: flex;
+        /* justify-content: center; */
+        /* justify-content: flex-end; */
+        /* justify-content: space-around;  */
+        justify-content: space-between;
+      }
+
       .container div,
       .container-2 div {
         border: 1px solid black;
@@ -32,25 +28,21 @@
       }
 
       .box-1 {
-        flex: 3;
-        order: 2;
+        flex-grow: 3;
+        width: 300px;
       }
       .box-2 {
-        flex: 1;
-        order: 1;
+        flex-grow: 1;
+        width: 300px;
       }
       .box-3 {
-        flex: 1;
-        order: 3;
+        flex-grow: 1;
+        width: 300px;
       }
 
       .box-container-2 {
         width: 25%;
       }
-
-      /* .box-1, .box-2, .box-3{
-          float: right; // just tried for fun
-      } */
     </style>
   </head>
   <body>

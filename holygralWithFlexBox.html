@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+      header {
+        background-color: lightblue;
+        height: 10vh;
+      }
+      .middle-sections {
+        display: flex;
+        height: 80vh;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .left-bar {
+        background-color: aqua;
+        flex: 1 1 100px;
+      }
+      .main-content {
+        background-color: lightgreen;
+        flex: 2 1 300px;
+      }
+      .right-bar {
+        background-color: lightsalmon;
+        flex: 1 1 100px;
+      }
+      footer {
+        height: 10vh;
+        background-color: lightgray;
+      }
+      /* More fine-grained control */
+      @media (max-width: 500px) {
+        .left-bar,
+        .main-content,
+        .right-bar {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <main class="middle-sections">
+      <section class="left-bar">Left</section>
+      <section class="main-content">main</section>
+      <section class="right-bar">right</section>
+    </main>
+    <footer>This is footer</footer>
+  </body>
+</html>
